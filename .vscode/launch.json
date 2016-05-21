@@ -2,7 +2,7 @@
     "version": "0.1.0",
     "configurations": [
         {
-            "name": "Launch localhost with sourcemaps",
+            "name": "Chrome: Launch Localhost",
             "type": "chrome",
             "request": "launch",
             "url": "http://localhost:3000/index.html",
@@ -15,23 +15,25 @@
             "sourceMaps": true
         },
         {
-            "name": "Launch index.html with sourcemaps)",
-            "type": "chrome",
-            "request": "launch",
-            "runtimeArgs": [
-                "--new-window", //Open in new window
-                "--user-data-dir=/home/jorge/NodeJS/Projetos/chrome-user-data/", //Can be any directory. Makes chrome load in a different directory so that it opens in a new instance.
-                "--remote-debugging-port=9222" //Open in port 9222 (standard chrome debug port)
-            ],
-            "file": "${workspaceRoot}/index.html",
-            "sourceMaps": true
-        },
-        {
-            "name": "Attach with sourcemaps",
+            "name": "Chrome: Attach",
             "type": "chrome",
             "request": "attach",
-            "port": 9222,
-            "sourceMaps": true
+            "port": 9222
+        },
+        {
+            "name": "Firefox: Launch Localhost",
+            "type": "firefox",
+            "request": "launch",
+            "url": "http://localhost:3000/index.html",
+            // "firefoxArgs": [
+            //     "-start-debugger-server -no-remote"
+            // ],
+            "webRoot": "${workspaceRoot}/app/"
+        },
+        {
+            "name": "Firefox: Attach",
+            "type": "firefox",
+            "request": "attach"
         }
     ]
 }
