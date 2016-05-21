@@ -1,0 +1,37 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Launch localhost with sourcemaps",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:3000/index.html",
+            "runtimeArgs": [
+                "--new-window", //Open in new window
+                "--user-data-dir=/home/jorge/NodeJS/Projetos/chrome-user-data/", //Can be any directory. Makes chrome load in a different directory so that it opens in a new instance.
+                "--remote-debugging-port=9222" //Open in port 9222 (standard chrome debug port)
+            ],
+            "webRoot": "${workspaceRoot}/app",
+            "sourceMaps": true
+        },
+        {
+            "name": "Launch index.html with sourcemaps)",
+            "type": "chrome",
+            "request": "launch",
+            "runtimeArgs": [
+                "--new-window", //Open in new window
+                "--user-data-dir=/home/jorge/NodeJS/Projetos/chrome-user-data/", //Can be any directory. Makes chrome load in a different directory so that it opens in a new instance.
+                "--remote-debugging-port=9222" //Open in port 9222 (standard chrome debug port)
+            ],
+            "file": "${workspaceRoot}/index.html",
+            "sourceMaps": true
+        },
+        {
+            "name": "Attach with sourcemaps",
+            "type": "chrome",
+            "request": "attach",
+            "port": 9222,
+            "sourceMaps": true
+        }
+    ]
+}
